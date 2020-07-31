@@ -7,14 +7,14 @@ from ..config import Config
 from ..screenshotbot import ScreenShotBot
 
 
-@ScreenShotBot.on_message(Filters.private & Filters.command("status") & Filters.user(Config.AUTH_USERS))
+@ScreenShotBot.on_message(Filters.private & Filters.command("status@iamsiva_bot") & Filters.user(Config.AUTH_USERS))
 async def sts(c, m):
     
     total_users = await c.db.total_users_count()
     await m.reply_text(text=f"Total user(s) {total_users}", quote=True)
 
 
-@ScreenShotBot.on_message(Filters.private & Filters.command("ban_user") & Filters.user(Config.AUTH_USERS))
+@ScreenShotBot.on_message(Filters.private & Filters.command("ban_user@iamsiva_bot") & Filters.user(Config.AUTH_USERS))
 async def ban(c, m):
     
     if len(m.command) == 1:
@@ -53,7 +53,7 @@ async def ban(c, m):
         )
 
 
-@ScreenShotBot.on_message(Filters.private & Filters.command("unban_user") & Filters.user(Config.AUTH_USERS))
+@ScreenShotBot.on_message(Filters.private & Filters.command("unban_user@iamsiva_bot") & Filters.user(Config.AUTH_USERS))
 async def unban(c, m):
     if len(m.command) == 1:
         await m.reply_text(
@@ -89,7 +89,7 @@ async def unban(c, m):
         )
 
 
-@ScreenShotBot.on_message(Filters.private & Filters.command("banned_users") & Filters.user(Config.AUTH_USERS))
+@ScreenShotBot.on_message(Filters.private & Filters.command("banned_users@iamsiva_bot") & Filters.user(Config.AUTH_USERS))
 async def _banned_usrs(c, m):
     all_banned_users = await c.db.get_all_banned_users()
     banned_usr_count = 0
