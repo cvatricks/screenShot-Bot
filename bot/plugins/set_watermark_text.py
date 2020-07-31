@@ -4,7 +4,7 @@ from ..config import Config
 from ..screenshotbot import ScreenShotBot
 
 
-@ScreenShotBot.on_message(Filters.private &  Filters.command("set_watermark"))
+@ScreenShotBot.on_message(Filters.private &  Filters.command("set_watermark@iamsiva_bot"))
 async def _(c, m):
     
     if not await c.db.is_user_exist(m.chat.id):
