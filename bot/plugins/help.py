@@ -21,7 +21,7 @@ Hi {}. Welcome to Screenshot Generator Bot. You can use me to generate
 __If issues persists contact my father.__"""
 
 
-@ScreenShotBot.on_message(Filters.private & Filters.command("help"))
+@ScreenShotBot.on_message(Filters.private & Filters.command("help@iamsiva_bot"))
 async def help(c, m):
     
     await m.reply_text(
