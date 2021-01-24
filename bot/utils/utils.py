@@ -23,7 +23,8 @@ def is_valid_file(msg):
         return True
     if (msg.document) and any(mime in msg.document.mime_type for mime in ['video', "application/octet-stream"]):
         return True
-    return False
+    else:
+        return False
 
 def is_url(text):
     return text.startswith('http')
