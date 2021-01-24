@@ -1,4 +1,4 @@
-async-timeout==3.0.1
+https://github.com/mahesh0253/pyrogram/archive/asyncio.zip
 tgcrypto
 motor
 dnspython
